@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		CFB4DF382A8B582600AE1CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF372A8B582600AE1CDC /* AppDelegate.swift */; };
 		CFB4DF3A2A8B582600AE1CDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF392A8B582600AE1CDC /* SceneDelegate.swift */; };
-		CFB4DF3C2A8B582600AE1CDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF3B2A8B582600AE1CDC /* ViewController.swift */; };
-		CFB4DF3F2A8B582600AE1CDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB4DF3D2A8B582600AE1CDC /* Main.storyboard */; };
+		CFB4DF3C2A8B582600AE1CDC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF3B2A8B582600AE1CDC /* MainViewController.swift */; };
 		CFB4DF412A8B582700AE1CDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB4DF402A8B582700AE1CDC /* Assets.xcassets */; };
 		CFB4DF442A8B582700AE1CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB4DF422A8B582700AE1CDC /* LaunchScreen.storyboard */; };
+		CFB4DF512A8B67CB00AE1CDC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF502A8B67CB00AE1CDC /* AppCoordinator.swift */; };
+		CFB4DF552A8B680400AE1CDC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF542A8B680400AE1CDC /* Coordinator.swift */; };
+		CFB4DF582A8B685200AE1CDC /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF572A8B685200AE1CDC /* BaseCoordinator.swift */; };
+		CFB4DF5A2A8B685900AE1CDC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF592A8B685900AE1CDC /* Router.swift */; };
+		CFB4DF5C2A8B686600AE1CDC /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF5B2A8B686600AE1CDC /* Routable.swift */; };
+		CFB4DF5F2A8B68BA00AE1CDC /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF5E2A8B68BA00AE1CDC /* Typealiases.swift */; };
+		CFB4DF622A8B69EC00AE1CDC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF612A8B69EC00AE1CDC /* DIContainer.swift */; };
+		CFB4DF642A8B69FE00AE1CDC /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF632A8B69FE00AE1CDC /* Injected.swift */; };
+		CFB4DF662A8B6A0400AE1CDC /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF652A8B6A0400AE1CDC /* Scope.swift */; };
+		CFB4DF692A8B6AA000AE1CDC /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF682A8B6AA000AE1CDC /* CalendarCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CFB4DF342A8B582600AE1CDC /* Caly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB4DF372A8B582600AE1CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB4DF392A8B582600AE1CDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CFB4DF3B2A8B582600AE1CDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CFB4DF3E2A8B582600AE1CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFB4DF3B2A8B582600AE1CDC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CFB4DF402A8B582700AE1CDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFB4DF432A8B582700AE1CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFB4DF452A8B582700AE1CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB4DF502A8B67CB00AE1CDC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CFB4DF542A8B680400AE1CDC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CFB4DF572A8B685200AE1CDC /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		CFB4DF592A8B685900AE1CDC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CFB4DF5B2A8B686600AE1CDC /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		CFB4DF5E2A8B68BA00AE1CDC /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		CFB4DF612A8B69EC00AE1CDC /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		CFB4DF632A8B69FE00AE1CDC /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		CFB4DF652A8B6A0400AE1CDC /* Scope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope.swift; sourceTree = "<group>"; };
+		CFB4DF682A8B6AA000AE1CDC /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,120 @@
 		CFB4DF362A8B582600AE1CDC /* Caly */ = {
 			isa = PBXGroup;
 			children = (
-				CFB4DF372A8B582600AE1CDC /* AppDelegate.swift */,
-				CFB4DF392A8B582600AE1CDC /* SceneDelegate.swift */,
-				CFB4DF3B2A8B582600AE1CDC /* ViewController.swift */,
-				CFB4DF3D2A8B582600AE1CDC /* Main.storyboard */,
+				CFB4DF6A2A8B6C2200AE1CDC /* DesignSystem */,
+				CFB4DF562A8B682900AE1CDC /* Core */,
+				CFB4DF4F2A8B679600AE1CDC /* AppBase */,
+				CFB4DF4D2A8B669900AE1CDC /* CalendarFeature */,
+				CFB4DF4C2A8B668900AE1CDC /* SupportingFiles */,
+				CFB4DF4B2A8B665900AE1CDC /* Resources */,
+			);
+			path = Caly;
+			sourceTree = "<group>";
+		};
+		CFB4DF4B2A8B665900AE1CDC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				CFB4DF402A8B582700AE1CDC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CFB4DF4C2A8B668900AE1CDC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				CFB4DF422A8B582700AE1CDC /* LaunchScreen.storyboard */,
 				CFB4DF452A8B582700AE1CDC /* Info.plist */,
 			);
-			path = Caly;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CFB4DF4D2A8B669900AE1CDC /* CalendarFeature */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF672A8B6A9300AE1CDC /* Shared */,
+				CFB4DF4E2A8B66B700AE1CDC /* MainScene */,
+			);
+			path = CalendarFeature;
+			sourceTree = "<group>";
+		};
+		CFB4DF4E2A8B66B700AE1CDC /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF3B2A8B582600AE1CDC /* MainViewController.swift */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		CFB4DF4F2A8B679600AE1CDC /* AppBase */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF372A8B582600AE1CDC /* AppDelegate.swift */,
+				CFB4DF392A8B582600AE1CDC /* SceneDelegate.swift */,
+				CFB4DF502A8B67CB00AE1CDC /* AppCoordinator.swift */,
+			);
+			path = AppBase;
+			sourceTree = "<group>";
+		};
+		CFB4DF522A8B67DD00AE1CDC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF602A8B699A00AE1CDC /* DI */,
+				CFB4DF5D2A8B687A00AE1CDC /* Miscellaneous */,
+				CFB4DF532A8B67F100AE1CDC /* Navigation */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CFB4DF532A8B67F100AE1CDC /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF542A8B680400AE1CDC /* Coordinator.swift */,
+				CFB4DF572A8B685200AE1CDC /* BaseCoordinator.swift */,
+				CFB4DF592A8B685900AE1CDC /* Router.swift */,
+				CFB4DF5B2A8B686600AE1CDC /* Routable.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		CFB4DF562A8B682900AE1CDC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF522A8B67DD00AE1CDC /* Utils */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CFB4DF5D2A8B687A00AE1CDC /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF5E2A8B68BA00AE1CDC /* Typealiases.swift */,
+			);
+			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		CFB4DF602A8B699A00AE1CDC /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF612A8B69EC00AE1CDC /* DIContainer.swift */,
+				CFB4DF632A8B69FE00AE1CDC /* Injected.swift */,
+				CFB4DF652A8B6A0400AE1CDC /* Scope.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		CFB4DF672A8B6A9300AE1CDC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF682A8B6AA000AE1CDC /* CalendarCoordinator.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CFB4DF6A2A8B6C2200AE1CDC /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +250,6 @@
 			files = (
 				CFB4DF442A8B582700AE1CDC /* LaunchScreen.storyboard in Resources */,
 				CFB4DF412A8B582700AE1CDC /* Assets.xcassets in Resources */,
-				CFB4DF3F2A8B582600AE1CDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +260,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB4DF3C2A8B582600AE1CDC /* ViewController.swift in Sources */,
+				CFB4DF692A8B6AA000AE1CDC /* CalendarCoordinator.swift in Sources */,
+				CFB4DF512A8B67CB00AE1CDC /* AppCoordinator.swift in Sources */,
+				CFB4DF582A8B685200AE1CDC /* BaseCoordinator.swift in Sources */,
+				CFB4DF622A8B69EC00AE1CDC /* DIContainer.swift in Sources */,
+				CFB4DF642A8B69FE00AE1CDC /* Injected.swift in Sources */,
+				CFB4DF662A8B6A0400AE1CDC /* Scope.swift in Sources */,
+				CFB4DF3C2A8B582600AE1CDC /* MainViewController.swift in Sources */,
+				CFB4DF5A2A8B685900AE1CDC /* Router.swift in Sources */,
+				CFB4DF552A8B680400AE1CDC /* Coordinator.swift in Sources */,
+				CFB4DF5F2A8B68BA00AE1CDC /* Typealiases.swift in Sources */,
 				CFB4DF382A8B582600AE1CDC /* AppDelegate.swift in Sources */,
 				CFB4DF3A2A8B582600AE1CDC /* SceneDelegate.swift in Sources */,
+				CFB4DF5C2A8B686600AE1CDC /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CFB4DF3D2A8B582600AE1CDC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CFB4DF3E2A8B582600AE1CDC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CFB4DF422A8B582700AE1CDC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +413,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L7KZPDRX49;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Caly/Info.plist;
+				INFOPLIST_FILE = Caly/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +440,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L7KZPDRX49;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Caly/Info.plist;
+				INFOPLIST_FILE = Caly/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
