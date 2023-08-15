@@ -22,7 +22,6 @@
 		CFB4DF642A8B69FE00AE1CDC /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF632A8B69FE00AE1CDC /* Injected.swift */; };
 		CFB4DF662A8B6A0400AE1CDC /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF652A8B6A0400AE1CDC /* Scope.swift */; };
 		CFB4DF692A8B6AA000AE1CDC /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF682A8B6AA000AE1CDC /* CalendarCoordinator.swift */; };
-		CFB4DF6C2A8B6CBF00AE1CDC /* LayoutDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF6B2A8B6CBF00AE1CDC /* LayoutDSL.swift */; };
 		CFB4DF712A8B741D00AE1CDC /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF702A8B741D00AE1CDC /* Stylable.swift */; };
 		CFB4DF732A8B74ED00AE1CDC /* Stylable+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF722A8B74ED00AE1CDC /* Stylable+UIControl.swift */; };
 		CFB4DF752A8B770300AE1CDC /* Stylable+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF742A8B770300AE1CDC /* Stylable+UIView.swift */; };
@@ -31,6 +30,19 @@
 		CFB4DF7B2A8B791E00AE1CDC /* Stylable+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF7A2A8B791E00AE1CDC /* Stylable+UILabel.swift */; };
 		CFB4DF7D2A8B794F00AE1CDC /* Stylable+UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF7C2A8B794F00AE1CDC /* Stylable+UIStackView.swift */; };
 		CFB4DF7F2A8B797C00AE1CDC /* Stylable+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF7E2A8B797C00AE1CDC /* Stylable+UIButton.swift */; };
+		CFB4DF822A8B7B0400AE1CDC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF812A8B7B0400AE1CDC /* BaseViewController.swift */; };
+		CFB4DF842A8B7E8300AE1CDC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF832A8B7E8300AE1CDC /* MainView.swift */; };
+		CFB4DF862A8B7E9F00AE1CDC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF852A8B7E9F00AE1CDC /* MainViewModel.swift */; };
+		CFB4DF892A8B7F0100AE1CDC /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF882A8B7F0100AE1CDC /* AddEventViewController.swift */; };
+		CFB4DF8B2A8B7F0A00AE1CDC /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF8A2A8B7F0A00AE1CDC /* AddEventView.swift */; };
+		CFB4DF8D2A8B7F1400AE1CDC /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF8C2A8B7F1400AE1CDC /* AddEventViewModel.swift */; };
+		CFB4DF8F2A8B96AB00AE1CDC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF8E2A8B96AB00AE1CDC /* BaseView.swift */; };
+		CFB4DF922A8B99BB00AE1CDC /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF912A8B99BB00AE1CDC /* UIView+Constraints.swift */; };
+		CFB4DF942A8B9BC100AE1CDC /* Stylable+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF932A8B9BC100AE1CDC /* Stylable+UIScrollView.swift */; };
+		CFB4DF972A8BA38F00AE1CDC /* UIColor+Accent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF962A8BA38F00AE1CDC /* UIColor+Accent.swift */; };
+		CFB4DF992A8BAA1E00AE1CDC /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF982A8BAA1E00AE1CDC /* Text.swift */; };
+		CFB4DF9B2A8BC5C000AE1CDC /* Caprasimo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFB4DF9A2A8BC5C000AE1CDC /* Caprasimo-Regular.ttf */; };
+		CFB4DF9D2A8BC63E00AE1CDC /* UIFont+Caprasimo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF9C2A8BC63E00AE1CDC /* UIFont+Caprasimo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +63,6 @@
 		CFB4DF632A8B69FE00AE1CDC /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		CFB4DF652A8B6A0400AE1CDC /* Scope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope.swift; sourceTree = "<group>"; };
 		CFB4DF682A8B6AA000AE1CDC /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
-		CFB4DF6B2A8B6CBF00AE1CDC /* LayoutDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDSL.swift; sourceTree = "<group>"; };
 		CFB4DF702A8B741D00AE1CDC /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
 		CFB4DF722A8B74ED00AE1CDC /* Stylable+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIControl.swift"; sourceTree = "<group>"; };
 		CFB4DF742A8B770300AE1CDC /* Stylable+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIView.swift"; sourceTree = "<group>"; };
@@ -60,6 +71,19 @@
 		CFB4DF7A2A8B791E00AE1CDC /* Stylable+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UILabel.swift"; sourceTree = "<group>"; };
 		CFB4DF7C2A8B794F00AE1CDC /* Stylable+UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIStackView.swift"; sourceTree = "<group>"; };
 		CFB4DF7E2A8B797C00AE1CDC /* Stylable+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIButton.swift"; sourceTree = "<group>"; };
+		CFB4DF812A8B7B0400AE1CDC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CFB4DF832A8B7E8300AE1CDC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CFB4DF852A8B7E9F00AE1CDC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CFB4DF882A8B7F0100AE1CDC /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		CFB4DF8A2A8B7F0A00AE1CDC /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		CFB4DF8C2A8B7F1400AE1CDC /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
+		CFB4DF8E2A8B96AB00AE1CDC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CFB4DF912A8B99BB00AE1CDC /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		CFB4DF932A8B9BC100AE1CDC /* Stylable+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIScrollView.swift"; sourceTree = "<group>"; };
+		CFB4DF962A8BA38F00AE1CDC /* UIColor+Accent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Accent.swift"; sourceTree = "<group>"; };
+		CFB4DF982A8BAA1E00AE1CDC /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		CFB4DF9A2A8BC5C000AE1CDC /* Caprasimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Caprasimo-Regular.ttf"; sourceTree = "<group>"; };
+		CFB4DF9C2A8BC63E00AE1CDC /* UIFont+Caprasimo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Caprasimo.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +129,7 @@
 		CFB4DF4B2A8B665900AE1CDC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CFB4DF9A2A8BC5C000AE1CDC /* Caprasimo-Regular.ttf */,
 				CFB4DF402A8B582700AE1CDC /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -122,8 +147,9 @@
 		CFB4DF4D2A8B669900AE1CDC /* CalendarFeature */ = {
 			isa = PBXGroup;
 			children = (
-				CFB4DF672A8B6A9300AE1CDC /* Shared */,
+				CFB4DF872A8B7EF000AE1CDC /* AddEventScene */,
 				CFB4DF4E2A8B66B700AE1CDC /* MainScene */,
+				CFB4DF672A8B6A9300AE1CDC /* Shared */,
 			);
 			path = CalendarFeature;
 			sourceTree = "<group>";
@@ -131,6 +157,8 @@
 		CFB4DF4E2A8B66B700AE1CDC /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				CFB4DF832A8B7E8300AE1CDC /* MainView.swift */,
+				CFB4DF852A8B7E9F00AE1CDC /* MainViewModel.swift */,
 				CFB4DF3B2A8B582600AE1CDC /* MainViewController.swift */,
 			);
 			path = MainScene;
@@ -197,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				CFB4DF682A8B6AA000AE1CDC /* CalendarCoordinator.swift */,
+				CFB4DF982A8BAA1E00AE1CDC /* Text.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -204,7 +233,8 @@
 		CFB4DF6D2A8B73BB00AE1CDC /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				CFB4DF6F2A8B740900AE1CDC /* Layout */,
+				CFB4DF902A8B99A900AE1CDC /* Extensions */,
+				CFB4DF802A8B7AF000AE1CDC /* Components */,
 				CFB4DF6E2A8B73DD00AE1CDC /* Styler */,
 			);
 			path = DesignSystem;
@@ -221,16 +251,38 @@
 				CFB4DF7A2A8B791E00AE1CDC /* Stylable+UILabel.swift */,
 				CFB4DF7C2A8B794F00AE1CDC /* Stylable+UIStackView.swift */,
 				CFB4DF7E2A8B797C00AE1CDC /* Stylable+UIButton.swift */,
+				CFB4DF932A8B9BC100AE1CDC /* Stylable+UIScrollView.swift */,
 			);
 			path = Styler;
 			sourceTree = "<group>";
 		};
-		CFB4DF6F2A8B740900AE1CDC /* Layout */ = {
+		CFB4DF802A8B7AF000AE1CDC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				CFB4DF6B2A8B6CBF00AE1CDC /* LayoutDSL.swift */,
+				CFB4DF812A8B7B0400AE1CDC /* BaseViewController.swift */,
+				CFB4DF8E2A8B96AB00AE1CDC /* BaseView.swift */,
 			);
-			path = Layout;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CFB4DF872A8B7EF000AE1CDC /* AddEventScene */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF8A2A8B7F0A00AE1CDC /* AddEventView.swift */,
+				CFB4DF8C2A8B7F1400AE1CDC /* AddEventViewModel.swift */,
+				CFB4DF882A8B7F0100AE1CDC /* AddEventViewController.swift */,
+			);
+			path = AddEventScene;
+			sourceTree = "<group>";
+		};
+		CFB4DF902A8B99A900AE1CDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF912A8B99BB00AE1CDC /* UIView+Constraints.swift */,
+				CFB4DF962A8BA38F00AE1CDC /* UIColor+Accent.swift */,
+				CFB4DF9C2A8BC63E00AE1CDC /* UIFont+Caprasimo.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +345,7 @@
 			files = (
 				CFB4DF442A8B582700AE1CDC /* LaunchScreen.storyboard in Resources */,
 				CFB4DF412A8B582700AE1CDC /* Assets.xcassets in Resources */,
+				CFB4DF9B2A8BC5C000AE1CDC /* Caprasimo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,26 +356,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB4DF8F2A8B96AB00AE1CDC /* BaseView.swift in Sources */,
 				CFB4DF752A8B770300AE1CDC /* Stylable+UIView.swift in Sources */,
+				CFB4DF892A8B7F0100AE1CDC /* AddEventViewController.swift in Sources */,
+				CFB4DF842A8B7E8300AE1CDC /* MainView.swift in Sources */,
 				CFB4DF692A8B6AA000AE1CDC /* CalendarCoordinator.swift in Sources */,
 				CFB4DF512A8B67CB00AE1CDC /* AppCoordinator.swift in Sources */,
+				CFB4DF822A8B7B0400AE1CDC /* BaseViewController.swift in Sources */,
+				CFB4DF9D2A8BC63E00AE1CDC /* UIFont+Caprasimo.swift in Sources */,
+				CFB4DF992A8BAA1E00AE1CDC /* Text.swift in Sources */,
+				CFB4DF862A8B7E9F00AE1CDC /* MainViewModel.swift in Sources */,
 				CFB4DF7D2A8B794F00AE1CDC /* Stylable+UIStackView.swift in Sources */,
+				CFB4DF972A8BA38F00AE1CDC /* UIColor+Accent.swift in Sources */,
 				CFB4DF582A8B685200AE1CDC /* BaseCoordinator.swift in Sources */,
 				CFB4DF622A8B69EC00AE1CDC /* DIContainer.swift in Sources */,
 				CFB4DF792A8B78D000AE1CDC /* Stylable+UITextField.swift in Sources */,
 				CFB4DF642A8B69FE00AE1CDC /* Injected.swift in Sources */,
-				CFB4DF6C2A8B6CBF00AE1CDC /* LayoutDSL.swift in Sources */,
+				CFB4DF8D2A8B7F1400AE1CDC /* AddEventViewModel.swift in Sources */,
 				CFB4DF712A8B741D00AE1CDC /* Stylable.swift in Sources */,
 				CFB4DF662A8B6A0400AE1CDC /* Scope.swift in Sources */,
 				CFB4DF3C2A8B582600AE1CDC /* MainViewController.swift in Sources */,
+				CFB4DF942A8B9BC100AE1CDC /* Stylable+UIScrollView.swift in Sources */,
 				CFB4DF772A8B77DE00AE1CDC /* Stylabe+UIDatePicker.swift in Sources */,
 				CFB4DF5A2A8B685900AE1CDC /* Router.swift in Sources */,
 				CFB4DF552A8B680400AE1CDC /* Coordinator.swift in Sources */,
 				CFB4DF5F2A8B68BA00AE1CDC /* Typealiases.swift in Sources */,
 				CFB4DF382A8B582600AE1CDC /* AppDelegate.swift in Sources */,
 				CFB4DF732A8B74ED00AE1CDC /* Stylable+UIControl.swift in Sources */,
+				CFB4DF8B2A8B7F0A00AE1CDC /* AddEventView.swift in Sources */,
 				CFB4DF3A2A8B582600AE1CDC /* SceneDelegate.swift in Sources */,
 				CFB4DF7F2A8B797C00AE1CDC /* Stylable+UIButton.swift in Sources */,
+				CFB4DF922A8B99BB00AE1CDC /* UIView+Constraints.swift in Sources */,
 				CFB4DF7B2A8B791E00AE1CDC /* Stylable+UILabel.swift in Sources */,
 				CFB4DF5C2A8B686600AE1CDC /* Routable.swift in Sources */,
 			);

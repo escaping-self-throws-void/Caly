@@ -42,8 +42,8 @@ extension Router: Routable {
         viewControllers.forEach { executeClosure($0) }
     }
     
-    public func openURL(_ url: URL) {
-        UIApplication.shared.open(url, options: [:]) { _ in }
+    public func present(_ viewController: UIViewController, isAnimated: Bool) {
+        navigationController.present(viewController, animated: isAnimated)
     }
 }
 

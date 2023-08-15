@@ -7,43 +7,32 @@
 
 import UIKit
 
-final class MainViewController: UIViewController {
-    private lazy var calendarView: UIDatePicker = {
-        let view = UIDatePicker()
-        view.preferredDatePickerStyle = .inline
-        view.backgroundColor = .systemMint
-        return view
-    }()
-
+final class MainViewController: BaseViewController<MainView, MainViewModel> {
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        view.backgroundColor = .white
-        layoutViews()
     }
-    
+}
+
+// MARK: - Private methods
+extension MainViewController {
     private func setupNavigationBar() {
-        title = "Events Calendar"
+        title = Text.Main.title
+        
         navigationItem.rightBarButtonItem = .init(
             barButtonSystemItem: .add,
             target: self,
             action: #selector(addTapped)
         )
     }
-    
+}
+
+// MARK: - Actions
+extension MainViewController {
     @objc
     private func addTapped() {
-        
-    }
-    
-    private func layoutViews() {
-        calendarView.place(on: view).pin(
-            .centerX,
-            .top(to: view.safeAreaLayoutGuide, .top, padding: 16),
-            .trailing(to: view.safeAreaLayoutGuide, .trailing, padding: 16),
-            .leading(to: view.safeAreaLayoutGuide, .leading, padding: 16),
-            .fixedHeight(400)
-        )
+        viewModel.onAdd?()
     }
 }
 

@@ -21,6 +21,13 @@ extension Stylable where Self: UIStackView {
 
         return self
     }
+    
+    @discardableResult
+    func alignment(_ value: UIStackView.Alignment) -> Self {
+        self.alignment = value
+
+        return self
+    }
 
     @discardableResult
     func spacing(_ value: CGFloat) -> Self {

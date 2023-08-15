@@ -11,5 +11,5 @@ public protocol Routable: AnyObject {
     func push(_ viewController: UIViewController, isAnimated: Bool, onNavigateBack: VoidClosure?)
     func pop(_ isAnimated: Bool)
     func popToRoot(_ isAnimated: Bool)
-    func openURL(_ url: URL)
+    func present(_ viewController: UIViewController, isAnimated: Bool)
 }
