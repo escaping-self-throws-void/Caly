@@ -22,6 +22,15 @@
 		CFB4DF642A8B69FE00AE1CDC /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF632A8B69FE00AE1CDC /* Injected.swift */; };
 		CFB4DF662A8B6A0400AE1CDC /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF652A8B6A0400AE1CDC /* Scope.swift */; };
 		CFB4DF692A8B6AA000AE1CDC /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF682A8B6AA000AE1CDC /* CalendarCoordinator.swift */; };
+		CFB4DF6C2A8B6CBF00AE1CDC /* LayoutDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF6B2A8B6CBF00AE1CDC /* LayoutDSL.swift */; };
+		CFB4DF712A8B741D00AE1CDC /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF702A8B741D00AE1CDC /* Stylable.swift */; };
+		CFB4DF732A8B74ED00AE1CDC /* Stylable+UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF722A8B74ED00AE1CDC /* Stylable+UIControl.swift */; };
+		CFB4DF752A8B770300AE1CDC /* Stylable+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF742A8B770300AE1CDC /* Stylable+UIView.swift */; };
+		CFB4DF772A8B77DE00AE1CDC /* Stylabe+UIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF762A8B77DE00AE1CDC /* Stylabe+UIDatePicker.swift */; };
+		CFB4DF792A8B78D000AE1CDC /* Stylable+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF782A8B78D000AE1CDC /* Stylable+UITextField.swift */; };
+		CFB4DF7B2A8B791E00AE1CDC /* Stylable+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF7A2A8B791E00AE1CDC /* Stylable+UILabel.swift */; };
+		CFB4DF7D2A8B794F00AE1CDC /* Stylable+UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF7C2A8B794F00AE1CDC /* Stylable+UIStackView.swift */; };
+		CFB4DF7F2A8B797C00AE1CDC /* Stylable+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF7E2A8B797C00AE1CDC /* Stylable+UIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +51,15 @@
 		CFB4DF632A8B69FE00AE1CDC /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		CFB4DF652A8B6A0400AE1CDC /* Scope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope.swift; sourceTree = "<group>"; };
 		CFB4DF682A8B6AA000AE1CDC /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
+		CFB4DF6B2A8B6CBF00AE1CDC /* LayoutDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDSL.swift; sourceTree = "<group>"; };
+		CFB4DF702A8B741D00AE1CDC /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
+		CFB4DF722A8B74ED00AE1CDC /* Stylable+UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIControl.swift"; sourceTree = "<group>"; };
+		CFB4DF742A8B770300AE1CDC /* Stylable+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIView.swift"; sourceTree = "<group>"; };
+		CFB4DF762A8B77DE00AE1CDC /* Stylabe+UIDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylabe+UIDatePicker.swift"; sourceTree = "<group>"; };
+		CFB4DF782A8B78D000AE1CDC /* Stylable+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UITextField.swift"; sourceTree = "<group>"; };
+		CFB4DF7A2A8B791E00AE1CDC /* Stylable+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UILabel.swift"; sourceTree = "<group>"; };
+		CFB4DF7C2A8B794F00AE1CDC /* Stylable+UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIStackView.swift"; sourceTree = "<group>"; };
+		CFB4DF7E2A8B797C00AE1CDC /* Stylable+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +92,7 @@
 		CFB4DF362A8B582600AE1CDC /* Caly */ = {
 			isa = PBXGroup;
 			children = (
-				CFB4DF6A2A8B6C2200AE1CDC /* DesignSystem */,
+				CFB4DF6D2A8B73BB00AE1CDC /* DesignSystem */,
 				CFB4DF562A8B682900AE1CDC /* Core */,
 				CFB4DF4F2A8B679600AE1CDC /* AppBase */,
 				CFB4DF4D2A8B669900AE1CDC /* CalendarFeature */,
@@ -183,11 +201,36 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		CFB4DF6A2A8B6C2200AE1CDC /* DesignSystem */ = {
+		CFB4DF6D2A8B73BB00AE1CDC /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				CFB4DF6F2A8B740900AE1CDC /* Layout */,
+				CFB4DF6E2A8B73DD00AE1CDC /* Styler */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		CFB4DF6E2A8B73DD00AE1CDC /* Styler */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF702A8B741D00AE1CDC /* Stylable.swift */,
+				CFB4DF722A8B74ED00AE1CDC /* Stylable+UIControl.swift */,
+				CFB4DF742A8B770300AE1CDC /* Stylable+UIView.swift */,
+				CFB4DF762A8B77DE00AE1CDC /* Stylabe+UIDatePicker.swift */,
+				CFB4DF782A8B78D000AE1CDC /* Stylable+UITextField.swift */,
+				CFB4DF7A2A8B791E00AE1CDC /* Stylable+UILabel.swift */,
+				CFB4DF7C2A8B794F00AE1CDC /* Stylable+UIStackView.swift */,
+				CFB4DF7E2A8B797C00AE1CDC /* Stylable+UIButton.swift */,
+			);
+			path = Styler;
+			sourceTree = "<group>";
+		};
+		CFB4DF6F2A8B740900AE1CDC /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF6B2A8B6CBF00AE1CDC /* LayoutDSL.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,18 +303,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB4DF752A8B770300AE1CDC /* Stylable+UIView.swift in Sources */,
 				CFB4DF692A8B6AA000AE1CDC /* CalendarCoordinator.swift in Sources */,
 				CFB4DF512A8B67CB00AE1CDC /* AppCoordinator.swift in Sources */,
+				CFB4DF7D2A8B794F00AE1CDC /* Stylable+UIStackView.swift in Sources */,
 				CFB4DF582A8B685200AE1CDC /* BaseCoordinator.swift in Sources */,
 				CFB4DF622A8B69EC00AE1CDC /* DIContainer.swift in Sources */,
+				CFB4DF792A8B78D000AE1CDC /* Stylable+UITextField.swift in Sources */,
 				CFB4DF642A8B69FE00AE1CDC /* Injected.swift in Sources */,
+				CFB4DF6C2A8B6CBF00AE1CDC /* LayoutDSL.swift in Sources */,
+				CFB4DF712A8B741D00AE1CDC /* Stylable.swift in Sources */,
 				CFB4DF662A8B6A0400AE1CDC /* Scope.swift in Sources */,
 				CFB4DF3C2A8B582600AE1CDC /* MainViewController.swift in Sources */,
+				CFB4DF772A8B77DE00AE1CDC /* Stylabe+UIDatePicker.swift in Sources */,
 				CFB4DF5A2A8B685900AE1CDC /* Router.swift in Sources */,
 				CFB4DF552A8B680400AE1CDC /* Coordinator.swift in Sources */,
 				CFB4DF5F2A8B68BA00AE1CDC /* Typealiases.swift in Sources */,
 				CFB4DF382A8B582600AE1CDC /* AppDelegate.swift in Sources */,
+				CFB4DF732A8B74ED00AE1CDC /* Stylable+UIControl.swift in Sources */,
 				CFB4DF3A2A8B582600AE1CDC /* SceneDelegate.swift in Sources */,
+				CFB4DF7F2A8B797C00AE1CDC /* Stylable+UIButton.swift in Sources */,
+				CFB4DF7B2A8B791E00AE1CDC /* Stylable+UILabel.swift in Sources */,
 				CFB4DF5C2A8B686600AE1CDC /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
