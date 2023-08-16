@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Core
+import CalendarFeature
 
 final class AppCoordinator: BaseCoordinator {
      
