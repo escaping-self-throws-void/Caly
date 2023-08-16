@@ -6,15 +6,20 @@
 //
 
 import UIKit
+import Combine
 
 final class MainViewController: BaseViewController<MainView, MainViewModel> {
     // MARK: - Properties
     private lazy var dataSource = makeDataSource()
+    private lazy var dateSelection = UICalendarSelectionSingleDate(delegate: self)
+    private var cancellables = Set<AnyCancellable>()
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        bindViewModel()
+        viewModel.ffff()
     }
 }
 
@@ -29,17 +34,24 @@ extension MainViewController {
             action: #selector(addTapped)
         )
         
-        let dateSelection = UICalendarSelectionSingleDate(delegate: self)
-        dateSelection.setSelected(viewModel.selectedDate, animated: true)
         customView.calendarView.selectionBehavior = dateSelection
         customView.calendarView.delegate = self
-
-        viewModel.updateUI = { [weak self] in
-            guard let self else { return }
-            customView.calendarView.reloadDecorations(forDateComponents: [viewModel.selectedDate], animated: true)
-            dateSelection.setSelected(viewModel.selectedDate, animated: true)
-            dataSource.apply(makeSnapshot(viewModel.events))
-        }
+    }
+    
+    private func bindViewModel() {
+        viewModel.selectedDate
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] date in
+                guard let self else { return }
+//                viewModel.fetchEvents()
+                dataSource.apply(makeSnapshot(viewModel.events.filter { $0.time.toString == self.viewModel.selectedDate.value.toString }), animatingDifferences: false)
+                reload(selected: date)
+            }.store(in: &cancellables)
+    }
+    
+    private func reload(selected date: Date) {
+        customView.calendarView.reloadDecorations(forDateComponents: [date.toComponents], animated: true)
+        dateSelection.setSelected(date.toComponents, animated: true)
     }
 }
 
@@ -47,25 +59,31 @@ extension MainViewController {
 extension MainViewController {
     @objc
     private func addTapped() {
-        viewModel.onAdd?(viewModel.selectedDate)
+        viewModel.syncSelectedDate()
+        viewModel.onAddPressed?()
     }
 }
 
 // MARK: - UICalendarViewDelegate
 extension MainViewController: UICalendarViewDelegate {
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-        for event in viewModel.events where event.date.date?.toString == dateComponents.date?.toString {
+        for event in viewModel.events where event.time.toString == dateComponents.date?.toString {
             return .image(.init(systemName: Images.Main.note), color: .systemTeal)
         }
         return nil
+    }
+    
+    func calendarView(_ calendarView: UICalendarView, didChangeVisibleDateComponentsFrom previousDateComponents: DateComponents) {
+        calendarView.reloadDecorations(forDateComponents: [previousDateComponents], animated: true)
     }
 }
 
 // MARK: - UICalendarSelectionSingleDateDelegate
 extension MainViewController: UICalendarSelectionSingleDateDelegate {
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
-        if let dateComponents {
-            viewModel.updateSelected(date: dateComponents)
+        if let dateComponents, let date = dateComponents.date {
+            viewModel.updateSelected(date: date)
+            customView.calendarView.reloadDecorations(forDateComponents: [dateComponents], animated: true)
         }
     }
 }
@@ -79,7 +97,8 @@ extension MainViewController {
         /// Cell registration & configuration
         let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Event> { cell, _, model in
             var content = EventCellConfiguration()
-            content.date = model.date.date ?? .now
+            content.date = model.time
+            content.eventName = model.note
             cell.contentConfiguration = content
             
             var backgroundConfiguration = UIBackgroundConfiguration.listPlainCell()

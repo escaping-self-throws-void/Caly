@@ -32,10 +32,12 @@ extension AddEventViewController {
         )
         navigationItem.rightBarButtonItem?.isEnabled = false
         
+        viewModel.syncSelectedDate()
+        
         customView.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         customView.textField.becomeFirstResponder()
-        let date = viewModel.selectedDate.date ?? .now
-        customView.datePicker.setDate(date, animated: false)
+
+        customView.datePicker.setDate(viewModel.selectedDate, animated: false)
         customView.datePicker.addTarget(self, action: #selector(datePicked), for: .valueChanged)
     }
 }
@@ -50,21 +52,32 @@ extension AddEventViewController {
     
     @objc
     private func doneTapped(sender: UIBarButtonItem) {
-        let event = Event(date: viewModel.selectedDate, note: viewModel.eventNote)
-        viewModel.onEventAdded?(event)
-        dismiss(animated: true)
+        
+        Task {
+            customView.activityIndicator.startAnimating()
+            defer { customView.activityIndicator.stopAnimating() }
+            
+            do {
+                let saved = try await viewModel.addToCalendar()
+                if saved {
+                    viewModel.addEvent()
+                    dismiss(animated: true)
+                }
+            } catch {
+                show(error: error)
+            }
+        }
     }
     
     @objc
     private func textFieldDidChange(_ textField: UITextField) {
         guard let text = textField.text else { return }
         navigationItem.rightBarButtonItem?.isEnabled = !text.isEmpty
-        viewModel.eventNote = text
+        viewModel.updateEventNote(text)
     }
     
     @objc
     private func datePicked(_ datePicker: UIDatePicker) {
-        let dateComponents = Calendar.current.dateComponents([.day, .month, .year, .calendar], from: datePicker.date)
-        viewModel.selectedDate = dateComponents
+        viewModel.updateSelected(date: datePicker.date)
     }
 }

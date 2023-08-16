@@ -12,24 +12,35 @@ public final class CalendarCoordinator: BaseCoordinator {
     @Injected(.global)
     private var router: Routable
 
-    let mainViewController = MainViewController()
     public override func start() {
+        DIContainer.register(type: EventDatabase.self, scope: .global, implementer: EventDatabase())
+        DIContainer.register(type: EventServicable.self, implementer: EventService())
         
-        mainViewController.viewModel.onAdd = { [weak self] date in
-            self?.startAddEvent(date)
+        let mainViewController = MainViewController()
+        mainViewController.viewModel.onAddPressed = { [weak self] in
+            self?.startAddEvent()
         }
-        
         router.push(mainViewController, isAnimated: true, onNavigateBack: isCompleted)
     }
     
-    private func startAddEvent(_ date: DateComponents) {
+    private func startAddEvent() {
         let addEventViewController = AddEventViewController()
-        addEventViewController.viewModel.selectedDate = date
-        addEventViewController.viewModel.onEventAdded = { [weak self] event in
-            self?.mainViewController.viewModel.updateSelected(date: event.date)
-            self?.mainViewController.viewModel.events.append(event)
-        }
         let navigationController = UINavigationController(rootViewController: addEventViewController)
-        router.present(navigationController, isAnimated: true)
+        if let sheet = navigationController.sheetPresentationController {
+            sheet.detents = [
+                .custom(identifier: .large) { context in
+                    return context.maximumDetentValue * 0.75
+                },
+                .custom(identifier: .medium) { _ in
+                    return 300
+                },
+            ]
+            sheet.selectedDetentIdentifier = .large
+            sheet.prefersGrabberVisible = true
+            sheet.largestUndimmedDetentIdentifier = .large
+            router.present(navigationController, isAnimated: true)
+        } else {
+            router.present(navigationController, isAnimated: true)
+        }
     }
 }

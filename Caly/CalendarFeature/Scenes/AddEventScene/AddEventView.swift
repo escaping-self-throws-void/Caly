@@ -12,18 +12,12 @@ final class AddEventView: BaseView {
     private(set) lazy var textField = UITextField()
         .placeholder(Text.AddEvent.placeholder)
     private(set) lazy var datePicker = UIDatePicker()
-        .preferredDatePickerStyle(.compact)
-        .datePickerMode(.date)
+        .preferredDatePickerStyle(.automatic)
+        .datePickerMode(.dateAndTime)
         .minimumDate(.now)
         .maximumDate(.distantFuture)
         .backgroundColor(.accent)
         .tintColor(.accent)
-        .clipsToBounds(true)
-        .cornerRadius(12)
-    private(set) lazy var timePicker = UIDatePicker()
-        .preferredDatePickerStyle(.compact)
-        .datePickerMode(.time)
-        .backgroundColor(.accent)
         .clipsToBounds(true)
         .cornerRadius(12)
     private(set) lazy var textFieldTitle = UILabel()
@@ -35,6 +29,10 @@ final class AddEventView: BaseView {
     private(set) lazy var timeTitle = UILabel()
         .text(Text.AddEvent.tTitle)
         .font(.caprasimo16)
+    private(set) lazy var activityIndicator = UIActivityIndicatorView(style: .medium)
+        .hidesWhenStopped(true)
+        .tintColor(.accent)
+        .stopAnimation()
     
     // MARK: - Lifecycle
     override init(frame: CGRect) {
@@ -46,6 +44,10 @@ final class AddEventView: BaseView {
 // MARK: - Private methods
 extension AddEventView {
     private func _init() {
+        activityIndicator
+            .place(on: self)
+            .center(in: self)
+       
         let textFieldContainer = UIView()
             .backgroundColor(.accent)
             .clipsToBounds(true)
@@ -63,21 +65,8 @@ extension AddEventView {
             .spacing(5)
             .distribution(.fill)
             .alignment(.leading)
-        
-        let timeStack = UIStackView(arrangedSubviews: [timeTitle, timePicker])
-            .axis(.vertical)
-            .spacing(5)
-            .distribution(.fill)
-            .alignment(.leading)
-            .width(value: 100)
-        
-        let calendarStack = UIStackView(arrangedSubviews: [dateStack, timeStack])
-            .axis(.horizontal)
-            .spacing(16)
-            .distribution(.equalCentering)
-            .alignment(.leading)
-        
-        _ = UIStackView(arrangedSubviews: [textFieldStack, calendarStack])
+
+        _ = UIStackView(arrangedSubviews: [textFieldStack, dateStack])
             .axis(.vertical)
             .spacing(16)
             .place(on: self)

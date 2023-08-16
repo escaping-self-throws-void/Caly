@@ -9,7 +9,11 @@ import Foundation
 
 extension Date {
     var toString: String {
-        DateFormatter.live.string(from: self)
+        DateFormatter.date.string(from: self)
+    }
+    
+    var timeText: String {
+        DateFormatter.time.string(from: self)
     }
     
     var toComponents: DateComponents {

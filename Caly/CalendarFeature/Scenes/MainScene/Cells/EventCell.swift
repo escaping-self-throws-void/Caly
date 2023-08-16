@@ -50,7 +50,8 @@ final class EventCell: UIView, UIContentView {
 // MARK: - Private methods
 extension EventCell {
     private func applyConfiguration() {
-        //        numberLabel.text = "#\(configuration.number)"
+        timeLabel.text = currentConfiguration.date.timeText
+        eventLabel.text = currentConfiguration.eventName
     }
     
     private func _init() {
@@ -64,7 +65,7 @@ extension EventCell {
             .clipsToBounds(true)
         
         mainStack
-            .snap(to: self)
+            .snap(to: self, insets: .init(top: 10, left: 0, bottom: -10, right: 0))
         mainStack
             .height(value: 60)
         
@@ -74,6 +75,6 @@ extension EventCell {
             .bottom(to: mainStack, value: -10)
             .width(value: 3)
         timeLabel
-            .width(value: 50)
+            .width(value: 100)
     }
 }

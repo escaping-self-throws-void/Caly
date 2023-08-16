@@ -7,11 +7,14 @@
 
 import Foundation
 
-struct Event: Hashable {
+struct Event {
     let id = UUID()
-    let date: DateComponents
+    let time: Date
     let note: String
-    
+}
+
+// MARK: - Hashable
+extension Event: Hashable {
     static func == (lhs: Event, rhs: Event) -> Bool {
         return lhs.id == rhs.id
     }

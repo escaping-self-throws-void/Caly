@@ -8,9 +8,15 @@
 import Foundation
 
 extension DateFormatter {
-    static var live: DateFormatter {
+    static var date: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy"
+        return dateFormatter
+    }
+    
+    static var time: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
         return dateFormatter
     }
 }
