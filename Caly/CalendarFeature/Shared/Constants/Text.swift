@@ -10,10 +10,13 @@ import Foundation
 enum Text {
     enum Main {
         static let title = "Events Calendar"
-        static let placeholder = "New Interesting Event"
     }
     
     enum AddEvent {
         static let title = "New Event"
+        static let placeholder = "New Interesting Event"
+        static let tfTitle = "Event Title"
+        static let dTitle = "Date"
+        static let tTitle = "Time"
     }
 }

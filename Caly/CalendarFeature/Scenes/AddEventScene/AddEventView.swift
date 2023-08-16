@@ -10,10 +10,12 @@ import UIKit
 final class AddEventView: BaseView {
     // MARK: - Outlets
     private(set) lazy var textField = UITextField()
-        .placeholder(Text.placeholder)
+        .placeholder(Text.AddEvent.placeholder)
     private(set) lazy var datePicker = UIDatePicker()
         .preferredDatePickerStyle(.compact)
         .datePickerMode(.date)
+        .minimumDate(.now)
+        .maximumDate(.distantFuture)
         .backgroundColor(.accent)
         .tintColor(.accent)
         .clipsToBounds(true)
@@ -25,13 +27,13 @@ final class AddEventView: BaseView {
         .clipsToBounds(true)
         .cornerRadius(12)
     private(set) lazy var textFieldTitle = UILabel()
-        .text("Event Title")
+        .text(Text.AddEvent.tfTitle)
         .font(.caprasimo16)
     private(set) lazy var dateTitle = UILabel()
-        .text("Date")
+        .text(Text.AddEvent.dTitle)
         .font(.caprasimo16)
     private(set) lazy var timeTitle = UILabel()
-        .text("Time")
+        .text(Text.AddEvent.tTitle)
         .font(.caprasimo16)
     
     // MARK: - Lifecycle

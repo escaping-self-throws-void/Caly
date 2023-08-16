@@ -3,4 +3,101 @@
    uuid = "EAB0900D-A9F5-4262-B137-6D3F0DB2FAC6"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B77C521-904A-4127-960F-B18A629B3F22"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Caly/CalendarFeature/Scenes/AddEventScene/AddEventViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "datePicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2B77C521-904A-4127-960F-B18A629B3F22 - b417567707522fc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Caly.AddEventViewController.datePicked(__C.UIDatePicker) -&gt; ()"
+                  moduleName = "Caly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulmatar/Desktop/Caly/Caly/CalendarFeature/Scenes/AddEventScene/AddEventViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "2B77C521-904A-4127-960F-B18A629B3F22 - b417567707522fc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Caly.AddEventViewController.datePicked(__C.UIDatePicker) -&gt; ()"
+                  moduleName = "Caly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulmatar/Desktop/Caly/Caly/CalendarFeature/Scenes/AddEventScene/AddEventViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "608">
+               </Location>
+               <Location
+                  uuid = "2B77C521-904A-4127-960F-B18A629B3F22 - b417567707522fc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Caly.AddEventViewController.datePicked(__C.UIDatePicker) -&gt; ()"
+                  moduleName = "Caly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulmatar/Desktop/Caly/Caly/CalendarFeature/Scenes/AddEventScene/AddEventViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "652">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5C7093C-EAFB-40EE-8F75-77F6ED52CAC1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Caly/CalendarFeature/Scenes/AddEventScene/AddEventViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "doneTapped(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEBE0714-12BF-4E08-AA62-0FE03D3869B9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Caly/CalendarFeature/Scenes/AddEventScene/AddEventViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "doneTapped(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

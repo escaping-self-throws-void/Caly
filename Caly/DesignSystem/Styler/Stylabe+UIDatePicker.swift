@@ -21,4 +21,18 @@ extension Stylable where Self: UIDatePicker {
 
         return self
     }
+    
+    @discardableResult
+    func minimumDate(_ value: Date?) -> Self {
+        self.minimumDate = value
+
+        return self
+    }
+    
+    @discardableResult
+    func maximumDate(_ value: Date?) -> Self {
+        self.maximumDate = value
+
+        return self
+    }
 }

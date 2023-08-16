@@ -9,18 +9,21 @@ import UIKit
 
 final class MainView: BaseView {
     // MARK: - Outlets
-    private(set) lazy var calendarView = UIDatePicker()
-        .preferredDatePickerStyle(.inline)
-        .datePickerMode(.date)
+    private(set) lazy var calendarView = UICalendarView()
+        .availableDateRange(.init(start: .now, end: .distantFuture))
+        .fontDesign(.rounded)
         .backgroundColor(.accent)
         .clipsToBounds(true)
         .cornerRadius(16)
-    
-    private(set) lazy var collectionView = UICollectionView(
-        frame: .zero,
-        collectionViewLayout: UICollectionViewFlowLayout()
-    )
-        .backgroundColor(.clear)
+    private(set) lazy var collectionView: UICollectionView = {
+        var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+        configuration.backgroundColor = .clear
+        configuration.showsSeparators = false
+        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor(.clear)
+        return collectionView
+    }()
     
     // MARK: - Lifecycle
     override init(frame: CGRect) {

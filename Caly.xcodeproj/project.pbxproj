@@ -43,6 +43,15 @@
 		CFB4DF992A8BAA1E00AE1CDC /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF982A8BAA1E00AE1CDC /* Text.swift */; };
 		CFB4DF9B2A8BC5C000AE1CDC /* Caprasimo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFB4DF9A2A8BC5C000AE1CDC /* Caprasimo-Regular.ttf */; };
 		CFB4DF9D2A8BC63E00AE1CDC /* UIFont+Caprasimo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF9C2A8BC63E00AE1CDC /* UIFont+Caprasimo.swift */; };
+		CFB4DF9F2A8BF31200AE1CDC /* Stylable+UICalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DF9E2A8BF31200AE1CDC /* Stylable+UICalendarView.swift */; };
+		CFB4DFA22A8C145800AE1CDC /* EventDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DFA12A8C145800AE1CDC /* EventDatabase.swift */; };
+		CFB4DFA42A8C153700AE1CDC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DFA32A8C153700AE1CDC /* Event.swift */; };
+		CFB4DFA92A8C1B3000AE1CDC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DFA82A8C1B3000AE1CDC /* Images.swift */; };
+		CFB4DFAC2A8C756400AE1CDC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DFAB2A8C756400AE1CDC /* Date+Extensions.swift */; };
+		CFB4DFAE2A8C758D00AE1CDC /* DateFotmatter+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DFAD2A8C758D00AE1CDC /* DateFotmatter+Live.swift */; };
+		CFB4DFB12A8C79FF00AE1CDC /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DFB02A8C79FF00AE1CDC /* EventService.swift */; };
+		CFB4DFB32A8C806500AE1CDC /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DFB22A8C806500AE1CDC /* EventCell.swift */; };
+		CFB4DFB62A8C81A100AE1CDC /* EventCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4DFB52A8C81A100AE1CDC /* EventCellConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +93,15 @@
 		CFB4DF982A8BAA1E00AE1CDC /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		CFB4DF9A2A8BC5C000AE1CDC /* Caprasimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Caprasimo-Regular.ttf"; sourceTree = "<group>"; };
 		CFB4DF9C2A8BC63E00AE1CDC /* UIFont+Caprasimo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Caprasimo.swift"; sourceTree = "<group>"; };
+		CFB4DF9E2A8BF31200AE1CDC /* Stylable+UICalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UICalendarView.swift"; sourceTree = "<group>"; };
+		CFB4DFA12A8C145800AE1CDC /* EventDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDatabase.swift; sourceTree = "<group>"; };
+		CFB4DFA32A8C153700AE1CDC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		CFB4DFA82A8C1B3000AE1CDC /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		CFB4DFAB2A8C756400AE1CDC /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		CFB4DFAD2A8C758D00AE1CDC /* DateFotmatter+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFotmatter+Live.swift"; sourceTree = "<group>"; };
+		CFB4DFB02A8C79FF00AE1CDC /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		CFB4DFB22A8C806500AE1CDC /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		CFB4DFB52A8C81A100AE1CDC /* EventCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +165,8 @@
 		CFB4DF4D2A8B669900AE1CDC /* CalendarFeature */ = {
 			isa = PBXGroup;
 			children = (
-				CFB4DF872A8B7EF000AE1CDC /* AddEventScene */,
-				CFB4DF4E2A8B66B700AE1CDC /* MainScene */,
-				CFB4DF672A8B6A9300AE1CDC /* Shared */,
+				CFB4DFA72A8C162300AE1CDC /* Shared */,
+				CFB4DFA52A8C159600AE1CDC /* Scenes */,
 			);
 			path = CalendarFeature;
 			sourceTree = "<group>";
@@ -157,6 +174,7 @@
 		CFB4DF4E2A8B66B700AE1CDC /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				CFB4DFB42A8C808400AE1CDC /* Cells */,
 				CFB4DF832A8B7E8300AE1CDC /* MainView.swift */,
 				CFB4DF852A8B7E9F00AE1CDC /* MainViewModel.swift */,
 				CFB4DF3B2A8B582600AE1CDC /* MainViewController.swift */,
@@ -177,6 +195,7 @@
 		CFB4DF522A8B67DD00AE1CDC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CFB4DFAF2A8C79E800AE1CDC /* EventService */,
 				CFB4DF602A8B699A00AE1CDC /* DI */,
 				CFB4DF5D2A8B687A00AE1CDC /* Miscellaneous */,
 				CFB4DF532A8B67F100AE1CDC /* Navigation */,
@@ -221,13 +240,12 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
-		CFB4DF672A8B6A9300AE1CDC /* Shared */ = {
+		CFB4DF672A8B6A9300AE1CDC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CFB4DF682A8B6AA000AE1CDC /* CalendarCoordinator.swift */,
-				CFB4DF982A8BAA1E00AE1CDC /* Text.swift */,
+				CFB4DFA32A8C153700AE1CDC /* Event.swift */,
 			);
-			path = Shared;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CFB4DF6D2A8B73BB00AE1CDC /* DesignSystem */ = {
@@ -252,6 +270,7 @@
 				CFB4DF7C2A8B794F00AE1CDC /* Stylable+UIStackView.swift */,
 				CFB4DF7E2A8B797C00AE1CDC /* Stylable+UIButton.swift */,
 				CFB4DF932A8B9BC100AE1CDC /* Stylable+UIScrollView.swift */,
+				CFB4DF9E2A8BF31200AE1CDC /* Stylable+UICalendarView.swift */,
 			);
 			path = Styler;
 			sourceTree = "<group>";
@@ -283,6 +302,70 @@
 				CFB4DF9C2A8BC63E00AE1CDC /* UIFont+Caprasimo.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFB4DFA02A8C11DB00AE1CDC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF982A8BAA1E00AE1CDC /* Text.swift */,
+				CFB4DFA82A8C1B3000AE1CDC /* Images.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CFB4DFA52A8C159600AE1CDC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DF872A8B7EF000AE1CDC /* AddEventScene */,
+				CFB4DF4E2A8B66B700AE1CDC /* MainScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CFB4DFA62A8C15A800AE1CDC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DFA12A8C145800AE1CDC /* EventDatabase.swift */,
+				CFB4DF682A8B6AA000AE1CDC /* CalendarCoordinator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CFB4DFA72A8C162300AE1CDC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DFAA2A8C752C00AE1CDC /* Extensions */,
+				CFB4DFA62A8C15A800AE1CDC /* Services */,
+				CFB4DFA02A8C11DB00AE1CDC /* Constants */,
+				CFB4DF672A8B6A9300AE1CDC /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CFB4DFAA2A8C752C00AE1CDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DFAB2A8C756400AE1CDC /* Date+Extensions.swift */,
+				CFB4DFAD2A8C758D00AE1CDC /* DateFotmatter+Live.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFB4DFAF2A8C79E800AE1CDC /* EventService */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DFB02A8C79FF00AE1CDC /* EventService.swift */,
+			);
+			path = EventService;
+			sourceTree = "<group>";
+		};
+		CFB4DFB42A8C808400AE1CDC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4DFB22A8C806500AE1CDC /* EventCell.swift */,
+				CFB4DFB52A8C81A100AE1CDC /* EventCellConfiguration.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,18 +446,23 @@
 				CFB4DF692A8B6AA000AE1CDC /* CalendarCoordinator.swift in Sources */,
 				CFB4DF512A8B67CB00AE1CDC /* AppCoordinator.swift in Sources */,
 				CFB4DF822A8B7B0400AE1CDC /* BaseViewController.swift in Sources */,
+				CFB4DFB62A8C81A100AE1CDC /* EventCellConfiguration.swift in Sources */,
 				CFB4DF9D2A8BC63E00AE1CDC /* UIFont+Caprasimo.swift in Sources */,
+				CFB4DFB12A8C79FF00AE1CDC /* EventService.swift in Sources */,
 				CFB4DF992A8BAA1E00AE1CDC /* Text.swift in Sources */,
 				CFB4DF862A8B7E9F00AE1CDC /* MainViewModel.swift in Sources */,
 				CFB4DF7D2A8B794F00AE1CDC /* Stylable+UIStackView.swift in Sources */,
 				CFB4DF972A8BA38F00AE1CDC /* UIColor+Accent.swift in Sources */,
 				CFB4DF582A8B685200AE1CDC /* BaseCoordinator.swift in Sources */,
+				CFB4DFA92A8C1B3000AE1CDC /* Images.swift in Sources */,
 				CFB4DF622A8B69EC00AE1CDC /* DIContainer.swift in Sources */,
 				CFB4DF792A8B78D000AE1CDC /* Stylable+UITextField.swift in Sources */,
+				CFB4DFB32A8C806500AE1CDC /* EventCell.swift in Sources */,
 				CFB4DF642A8B69FE00AE1CDC /* Injected.swift in Sources */,
 				CFB4DF8D2A8B7F1400AE1CDC /* AddEventViewModel.swift in Sources */,
 				CFB4DF712A8B741D00AE1CDC /* Stylable.swift in Sources */,
 				CFB4DF662A8B6A0400AE1CDC /* Scope.swift in Sources */,
+				CFB4DFA22A8C145800AE1CDC /* EventDatabase.swift in Sources */,
 				CFB4DF3C2A8B582600AE1CDC /* MainViewController.swift in Sources */,
 				CFB4DF942A8B9BC100AE1CDC /* Stylable+UIScrollView.swift in Sources */,
 				CFB4DF772A8B77DE00AE1CDC /* Stylabe+UIDatePicker.swift in Sources */,
@@ -383,11 +471,15 @@
 				CFB4DF5F2A8B68BA00AE1CDC /* Typealiases.swift in Sources */,
 				CFB4DF382A8B582600AE1CDC /* AppDelegate.swift in Sources */,
 				CFB4DF732A8B74ED00AE1CDC /* Stylable+UIControl.swift in Sources */,
+				CFB4DFA42A8C153700AE1CDC /* Event.swift in Sources */,
 				CFB4DF8B2A8B7F0A00AE1CDC /* AddEventView.swift in Sources */,
+				CFB4DFAC2A8C756400AE1CDC /* Date+Extensions.swift in Sources */,
 				CFB4DF3A2A8B582600AE1CDC /* SceneDelegate.swift in Sources */,
+				CFB4DFAE2A8C758D00AE1CDC /* DateFotmatter+Live.swift in Sources */,
 				CFB4DF7F2A8B797C00AE1CDC /* Stylable+UIButton.swift in Sources */,
 				CFB4DF922A8B99BB00AE1CDC /* UIView+Constraints.swift in Sources */,
 				CFB4DF7B2A8B791E00AE1CDC /* Stylable+UILabel.swift in Sources */,
+				CFB4DF9F2A8BF31200AE1CDC /* Stylable+UICalendarView.swift in Sources */,
 				CFB4DF5C2A8B686600AE1CDC /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
