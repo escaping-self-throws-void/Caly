@@ -19,7 +19,7 @@ final class MainViewController: BaseViewController<MainView, MainViewModel> {
         super.viewDidLoad()
         setupViews()
         bindViewModel()
-        viewModel.ffff()
+        fetchCalendar()
     }
 }
 
@@ -43,13 +43,20 @@ extension MainViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] date in
                 guard let self else { return }
-//                viewModel.fetchEvents()
-                dataSource.apply(makeSnapshot(viewModel.events.filter { $0.time.toString == self.viewModel.selectedDate.value.toString }), animatingDifferences: false)
-                reload(selected: date)
+                dataSource.apply(
+                    makeSnapshot(viewModel.getEventsPerSelection()),
+                    animatingDifferences: false
+                )
+                apply(selected: date)
             }.store(in: &cancellables)
     }
     
-    private func reload(selected date: Date) {
+    private func fetchCalendar() {
+        viewModel.fetchEvents()
+        viewModel.updateSelected(date: .now)
+    }
+    
+    private func apply(selected date: Date) {
         customView.calendarView.reloadDecorations(forDateComponents: [date.toComponents], animated: true)
         dateSelection.setSelected(date.toComponents, animated: true)
     }
@@ -59,7 +66,7 @@ extension MainViewController {
 extension MainViewController {
     @objc
     private func addTapped() {
-        viewModel.syncSelectedDate()
+        viewModel.passSelection()
         viewModel.onAddPressed?()
     }
 }
@@ -67,14 +74,11 @@ extension MainViewController {
 // MARK: - UICalendarViewDelegate
 extension MainViewController: UICalendarViewDelegate {
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-        for event in viewModel.events where event.time.toString == dateComponents.date?.toString {
+        let all = viewModel.getAllEvents()
+        for event in all where event.time.toString == dateComponents.date?.toString {
             return .image(.init(systemName: Images.Main.note), color: .systemTeal)
         }
         return nil
-    }
-    
-    func calendarView(_ calendarView: UICalendarView, didChangeVisibleDateComponentsFrom previousDateComponents: DateComponents) {
-        calendarView.reloadDecorations(forDateComponents: [previousDateComponents], animated: true)
     }
 }
 
@@ -83,7 +87,6 @@ extension MainViewController: UICalendarSelectionSingleDateDelegate {
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
         if let dateComponents, let date = dateComponents.date {
             viewModel.updateSelected(date: date)
-            customView.calendarView.reloadDecorations(forDateComponents: [dateComponents], animated: true)
         }
     }
 }

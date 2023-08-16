@@ -11,8 +11,7 @@ final class AddEventViewModel: NSObject {
     // MARK: - Properties
     @Injected(.global)
     private var dataBase: EventDatabase
-    @Injected
-    private var eventService: EventServicable
+
     
     private var eventNote: String = ""
     private(set) var selectedDate: Date = .now
@@ -28,17 +27,15 @@ extension AddEventViewModel {
         eventNote = note
     }
     
-    func syncSelectedDate() {
-        updateSelected(date: dataBase.selectedDate.value)
+    func passSelectedDate() {
+        dataBase.passingDate.send(selectedDate)
     }
     
-    func addEvent() {
-        let event = Event(time: selectedDate, note: eventNote)
-        dataBase.add(events: [event], for: selectedDate)
-        dataBase.selectedDate.send(selectedDate)
+    func sync() {
+        updateSelected(date: dataBase.passingDate.value)
     }
     
-    func addToCalendar() async throws -> Bool {
-        try await eventService.checkPermission(for: selectedDate, eventName: eventNote)
+    func addToCalendar() async throws {
+        try await dataBase.saveEvent(selectedDate, title: eventNote)
     }
 }

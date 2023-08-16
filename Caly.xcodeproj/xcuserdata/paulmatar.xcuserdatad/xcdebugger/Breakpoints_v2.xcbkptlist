@@ -8,48 +8,16 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "31504BF4-638E-4D23-B535-5C72B9848949"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Caly/CalendarFeature/Scenes/MainScene/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "calendarView(_:decorationFor:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "31504BF4-638E-4D23-B535-5C72B9848949 - d82409ecbdf8f3d6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Caly.MainViewController.addTapped() -&gt; ()"
-                  moduleName = "Caly"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulmatar/Desktop/Caly/Caly/CalendarFeature/Scenes/MainScene/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "31504BF4-638E-4D23-B535-5C72B9848949 - b7675d38453cca71"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Caly.MainViewController.calendarView(_: __C.UICalendarView, decorationFor: Foundation.DateComponents) -&gt; Swift.Optional&lt;__C.UICalendarViewDecoration&gt;"
-                  moduleName = "Caly"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulmatar/Desktop/Caly/Caly/CalendarFeature/Scenes/MainScene/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "456">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,42 +30,10 @@
             filePath = "Caly/CalendarFeature/Scenes/MainScene/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "calendarView(_:decorationFor:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EFECE43C-A965-430C-A33B-0A1DC8605010 - d82409ecbdf8f3b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Caly.MainViewController.addTapped() -&gt; ()"
-                  moduleName = "Caly"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulmatar/Desktop/Caly/Caly/CalendarFeature/Scenes/MainScene/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "236">
-               </Location>
-               <Location
-                  uuid = "EFECE43C-A965-430C-A33B-0A1DC8605010 - b7675d38453cca12"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Caly.MainViewController.calendarView(_: __C.UICalendarView, decorationFor: Foundation.DateComponents) -&gt; Swift.Optional&lt;__C.UICalendarViewDecoration&gt;"
-                  moduleName = "Caly"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulmatar/Desktop/Caly/Caly/CalendarFeature/Scenes/MainScene/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "1676">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,8 +46,8 @@
             filePath = "Caly/CalendarFeature/Scenes/MainScene/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "calendarView(_:decorationFor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -119,16 +55,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DF37B14D-4F28-4993-9EE9-D38D74A06CAC"
+            uuid = "A1B80330-E50B-4A12-BACC-A62188815D78"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Caly/CalendarFeature/Scenes/MainScene/MainViewController.swift"
+            filePath = "Caly/CalendarFeature/Scenes/MainScene/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "calendarView(_:didChangeVisibleDateComponentsFrom:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "getEventsPerSelection()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3452BE52-112C-4C41-83F5-C9CAB688BEDB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Caly/CalendarFeature/Shared/Services/EventDatabase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "fetchEvents()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "082780E9-F251-44AF-A49C-84C5F1B865D5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Caly/CalendarFeature/Scenes/MainScene/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchEvents()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -13,8 +13,8 @@ public final class CalendarCoordinator: BaseCoordinator {
     private var router: Routable
 
     public override func start() {
-        DIContainer.register(type: EventDatabase.self, scope: .global, implementer: EventDatabase())
         DIContainer.register(type: EventServicable.self, implementer: EventService())
+        DIContainer.register(type: EventDatabase.self, scope: .global, implementer: EventDatabase())
         
         let mainViewController = MainViewController()
         mainViewController.viewModel.onAddPressed = { [weak self] in

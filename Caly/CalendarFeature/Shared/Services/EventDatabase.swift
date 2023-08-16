@@ -9,21 +9,19 @@ import UIKit
 import Combine
 
 final class EventDatabase {
-    private(set) var eventsTable = [String: [Event]]()
-    private(set) var selectedDate = CurrentValueSubject<Date, Never>(.now)
+    @Injected
+    private var eventService: EventServicable
+    private(set) var events = [Event]()
+    private(set) var passingDate = CurrentValueSubject<Date, Never>(.now)
     
-    func getEvents(for date: Date) -> [Event] {
-        guard let events = eventsTable[date.toString] else {
-            return []
-        }
-        return events
+    func fetchEvents() {
+        let ekEvents = eventService.fetchEvents(.now)
+        events = ekEvents.map { Event(time: $0.startDate, note: $0.title) }
     }
     
-    func add(events: [Event], for date: Date) {
-        if let storedEvents = eventsTable[date.toString], !storedEvents.isEmpty {
-            eventsTable[date.toString]?.append(contentsOf: events)
-        } else {
-            eventsTable[date.toString] = events
-        }
+    func saveEvent(_ date: Date, title: String) async throws {
+        let ekEvent = try await eventService.insertEvent(date, title: title)
+        let event = Event(time: ekEvent.startDate, note: ekEvent.title)
+        events.append(event)
     }
 }

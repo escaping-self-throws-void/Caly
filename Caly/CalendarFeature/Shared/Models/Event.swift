@@ -8,7 +8,6 @@
 import Foundation
 
 struct Event {
-    let id = UUID()
     let time: Date
     let note: String
 }
@@ -16,10 +15,10 @@ struct Event {
 // MARK: - Hashable
 extension Event: Hashable {
     static func == (lhs: Event, rhs: Event) -> Bool {
-        return lhs.id == rhs.id
+        (lhs.time == rhs.time) && (lhs.note == rhs.note)
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
+        hasher.combine(time)
     }
 }

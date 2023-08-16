@@ -32,7 +32,7 @@ extension AddEventViewController {
         )
         navigationItem.rightBarButtonItem?.isEnabled = false
         
-        viewModel.syncSelectedDate()
+        viewModel.sync()
         
         customView.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         customView.textField.becomeFirstResponder()
@@ -58,11 +58,9 @@ extension AddEventViewController {
             defer { customView.activityIndicator.stopAnimating() }
             
             do {
-                let saved = try await viewModel.addToCalendar()
-                if saved {
-                    viewModel.addEvent()
-                    dismiss(animated: true)
-                }
+                try await viewModel.addToCalendar()
+                viewModel.passSelectedDate()
+                dismiss(animated: true)
             } catch {
                 show(error: error)
             }

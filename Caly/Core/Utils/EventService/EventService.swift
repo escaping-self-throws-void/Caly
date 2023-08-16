@@ -8,84 +8,66 @@
 import EventKit
 
 public protocol EventServicable {
-    func checkPermission(for date: Date, eventName: String) async throws -> Bool
+    func fetchEvents(_ date: Date) -> [EKEvent]
+    func insertEvent(_ date: Date, title: String) async throws -> EKEvent
 }
 
 public final class EventService: EventServicable {
     private let eventStore = EKEventStore()
-    
-    public func checkPermission(for date: Date, eventName: String) async throws -> Bool {
-        switch EKEventStore.authorizationStatus(for: .event) {
-        case .notDetermined:
-            let success = try await eventStore.requestAccess(to: .event)
-            guard success else { return false }
-            try insertEvent(store: eventStore, date: date, eventName: eventName)
-            return true
-        case .restricted:
-            throw Error.restricted
-        case .denied:
-            throw Error.denied
-        case .authorized:
-            try insertEvent(store: eventStore, date: date, eventName: eventName)
-            return true
-        @unknown default:
-            throw Error.unknown
-        }
-    }
-    
-    public func fetchEvents(for date: Date = .now) -> [EKEvent] {
-        let store = EKEventStore()
-        
-        let calendars = store.calendars(for: .event)
-        
+
+    public func fetchEvents(_ date: Date = .now) -> [EKEvent] {
+        let calendars = eventStore.calendars(for: .event)
         var events = [EKEvent]()
         
         for calendar in calendars where calendar.title == "Calendar" {
-            let oneMonthAgo = date.addingTimeInterval(-30*24*3600)
-            let oneMonthAfter = date.addingTimeInterval(30*24*3600)
-            let predicate =  store.predicateForEvents(withStart: oneMonthAgo, end: oneMonthAfter, calendars: [calendar])
+            let halfYearAgo = date.addingTimeInterval(-6*30*24*3600)
+            let halfYearAfter = date.addingTimeInterval(6*30*24*3600)
+            let predicate =  eventStore.predicateForEvents(withStart: halfYearAgo, end: halfYearAfter, calendars: [calendar])
             
-            let matchedEvents = store.events(matching: predicate)
+            let matchedEvents = eventStore.events(matching: predicate)
             events += matchedEvents
         }
         
         return events
     }
+    
+    public func insertEvent(_ date: Date, title: String) async throws -> EKEvent {
+        guard try await checkPermission() else { throw Error.noPermission }
+        
+        let calendars = eventStore.calendars(for: .event)
+        var result: EKEvent?
+        
+        for calendar in calendars where calendar.title == "Calendar" {
+            let event = EKEvent(eventStore: eventStore)
+            event.calendar = calendar
+            event.startDate = date
+            event.title = title
+            event.endDate = event.startDate.addingTimeInterval(60*60)
+            let reminder = EKAlarm(relativeOffset: -60*30)
+            event.alarms = [reminder]
+            try eventStore.save(event, span: .thisEvent)
+            result = event
+        }
+        
+        guard let result else { throw Error.failedToSave }
+        return result
+    }
 }
 
 // MARK: - Private methods
 extension EventService {
-    private func insertEvent(store: EKEventStore, date: Date, eventName: String) throws {
-        let calendars = store.calendars(for: .event)
-        for calendar in calendars where calendar.title == "Calendar" {
-            let event = EKEvent(eventStore: store)
-            event.calendar = calendar
-            event.startDate = date
-            event.title = eventName
-            event.endDate = event.startDate.addingTimeInterval(60*60)
-            let reminder = EKAlarm(relativeOffset: -60*30)
-            event.alarms = [reminder]
-            try store.save(event, span: .thisEvent)
-        }
-    }
-}
-
-// MARK: - Period
-extension EventService {
-    enum Period {
-        case month
-        case quarter
-        case year
-        
-        var timeInterval: TimeInterval {
-            switch self {
-            case .month:
-                return 30*24*3600
-            case .quarter:
-                return 90*24*3600
-            case .year:
-                return 365*24*3600
-            }
+    private func checkPermission() async throws -> Bool {
+        switch EKEventStore.authorizationStatus(for: .event) {
+        case .notDetermined:
+            return try await eventStore.requestAccess(to: .event)
+        case .restricted:
+            throw Error.restricted
+        case .denied:
+            throw Error.denied
+        case .authorized:
+            return true
+        @unknown default:
+            throw Error.unknown
         }
     }
 }
@@ -96,6 +78,8 @@ extension EventService {
         case restricted
         case denied
         case unknown
+        case noPermission
+        case failedToSave
         
         var errorDescription: String? {
             switch self {
@@ -105,6 +89,10 @@ extension EventService {
                 return "Calendar access restricted"
             case .unknown:
                 return "Calendar access unknown issue"
+            case .noPermission:
+                return "No permission to access calendar"
+            case .failedToSave:
+                return "Failed to save to calendar"
             }
         }
     }
